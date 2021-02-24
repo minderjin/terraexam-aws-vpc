@@ -19,7 +19,7 @@
 
 region = "eu-west-1"
 
-name = "example-vpc"
+name = "example"
 cidr            = "10.0.0.0/16"
 
 azs    = ["us-west-1a", "us-west-1c"]
