@@ -33,5 +33,8 @@ module "vpc" {
   enable_dns_support   = true
 
   tags = var.tags
+  
+  # ADD
+  create_database_nat_gateway_route = var.create_database_nat_gateway_route
 
 }

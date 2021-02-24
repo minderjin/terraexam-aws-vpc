@@ -15,14 +15,20 @@
 #
 #   terraform apply -var-file=terraform.tfvars
 #
+#
+# [Terraform Cloud] Environment Variables
+#
+#     AWS_ACCESS_KEY_ID
+#     AWS_SECRET_ACCESS_KEY 
+#
 
 
-region = "eu-west-1"
+region = "us-west-2"
 
 name = "example"
 cidr            = "10.0.0.0/16"
 
-azs    = ["us-west-1a", "us-west-1c"]
+azs    = ["us-west-2a", "us-west-2c"]
 
 public_subnets        = ["10.0.1.0/24", "10.0.2.0/24"]
 public_subnet_tags    = {
@@ -39,7 +45,7 @@ database_subnet_tags    = {
   Tier = "db"
 }
 
-enable_nat_gateway    = true
+enable_nat_gateway    = false
 single_nat_gateway    = true
 one_nat_gateway_per_az  = false
 
@@ -47,3 +53,7 @@ tags = {
  Terraform   = "true"
  Environment = "dev"
 }
+
+
+# ADD
+create_database_nat_gateway_route  = false

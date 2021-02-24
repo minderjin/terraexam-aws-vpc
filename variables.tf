@@ -18,3 +18,6 @@ variable "single_nat_gateway" {}
 variable "one_nat_gateway_per_az" {}
 
 variable "tags" {}
+
+# ADD
+variable "create_database_nat_gateway_route" {}
