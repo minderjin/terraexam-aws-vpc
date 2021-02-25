@@ -26,32 +26,32 @@
 region = "us-west-2"
 
 name = "example"
-cidr            = "10.0.0.0/16"
+cidr = "10.0.0.0/16"
 
-azs    = ["us-west-2a", "us-west-2c"]
+azs = ["us-west-2a", "us-west-2c"]
 
-public_subnets        = ["10.0.1.0/24", "10.0.2.0/24"]
-public_subnet_tags    = {
+public_subnets = ["10.0.1.0/24", "10.0.2.0/24"]
+public_subnet_tags = {
   Tier = "public"
 }
 
-private_subnets       = ["10.0.11.0/24", "10.0.12.0/24"]
-private_subnet_tags   = {
+private_subnets = ["10.0.11.0/24", "10.0.12.0/24"]
+private_subnet_tags = {
   Tier = "private"
 }
 
-database_subnets        = ["10.0.101.0/24", "10.0.102.0/24"]
-database_subnet_tags    = {
+database_subnets = ["10.0.101.0/24", "10.0.102.0/24"]
+database_subnet_tags = {
   Tier = "db"
 }
 
-enable_nat_gateway    = false
-single_nat_gateway    = true
-one_nat_gateway_per_az  = false
+enable_nat_gateway     = false
+single_nat_gateway     = true
+one_nat_gateway_per_az = false
 
 tags = {
- Terraform   = "true"
- Environment = "dev"
+  Terraform   = "true"
+  Environment = "dev"
 }
 
 
@@ -60,4 +60,4 @@ tags = {
 create_database_subnet_group           = true
 create_database_subnet_route_table     = false
 create_database_internet_gateway_route = false
-create_database_nat_gateway_route  = false
+create_database_nat_gateway_route      = false
