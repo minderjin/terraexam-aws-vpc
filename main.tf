@@ -1,6 +1,6 @@
 provider "aws" {
   # profile = "default"
-  region = var.region //"eu-west-1"
+  region = var.region
 }
 
 # data "aws_security_group" "default" {
