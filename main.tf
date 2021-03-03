@@ -4,10 +4,10 @@ provider "aws" {
 }
 
 module "vpc" {
-  ## public repository
+  ## public registry
   # source = "terraform-aws-modules/vpc/aws"
   
-  # private repository
+  # private registry
   source  = "app.terraform.io/terraexam/vpc/aws"
   version = "1.0.7"
 
