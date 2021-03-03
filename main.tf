@@ -40,7 +40,6 @@ module "vpc" {
   create_database_subnet_route_table = var.create_database_subnet_route_table
   create_database_nat_gateway_route = var.create_database_nat_gateway_route
   create_database_internet_gateway_route = var.create_database_internet_gateway_route
-  
   create_database_subnet_group = var.create_database_subnet_group
 
 }
