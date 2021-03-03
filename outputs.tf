@@ -29,3 +29,7 @@ output "database_subnets" {
 output "database_subnets_cidr_blocks" {
   value = module.vpc.database_subnets_cidr_blocks
 }
+
+output "database_subnet_group" {
+  value = module.vpc.database_subnet_group
+}
