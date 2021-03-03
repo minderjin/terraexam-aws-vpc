@@ -3,13 +3,14 @@ provider "aws" {
   region = var.region
 }
 
-# data "aws_security_group" "default" {
-#   name   = "default"
-#   vpc_id = module.vpc.vpc_id
-# }
-
 module "vpc" {
-  source = "terraform-aws-modules/vpc/aws"
+  ## public repository
+  # source = "terraform-aws-modules/vpc/aws"
+  
+  # private repository
+  source  = "app.terraform.io/terraexam/vpc/aws"
+  version = "1.0.7"
+
 
   name = var.name
   cidr = var.cidr
@@ -34,7 +35,12 @@ module "vpc" {
 
   tags = var.tags
 
+
   # ADD
+  create_database_subnet_route_table = var.create_database_subnet_route_table
   create_database_nat_gateway_route = var.create_database_nat_gateway_route
+  create_database_internet_gateway_route = var.create_database_internet_gateway_route
+  
+  # create_database_subnet_group = var.create_database_subnet_group
 
 }

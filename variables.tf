@@ -20,4 +20,6 @@ variable "one_nat_gateway_per_az" {}
 variable "tags" {}
 
 # ADD
+variable "create_database_subnet_route_table" {}
 variable "create_database_nat_gateway_route" {}
+variable "create_database_internet_gateway_route" {}
